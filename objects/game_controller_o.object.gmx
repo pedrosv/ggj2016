@@ -131,6 +131,9 @@ if verify_movement(get_current_paje_move(), self.current_move) {
             <string>/// verify inputs
 
 verify_input();
+if self.current_move != noone {
+    change_dancer_move(self.current_move);
+}
 </string>
           </argument>
         </arguments>

@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,11 +25,95 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>UPPER_RIGHT = char1_top_right_s;
-UPPER_LEFT = char1_top_left_s;
-BOT_RIGHT = char1_bot_right_s;
-BOT_LEFT = char1_bot_left_s;
+            <string>current_move = noone;
+anim_speed = 2; // Seconds to display all animation frames
 
+TOP_LEFT = paje_tl_s;
+TOP_RIGHT = paje_tr_s;
+TOP_MIDDLE = paje_tm_s;
+CENTER_LEFT = paje_cl_s;
+CENTER_RIGHT = paje_cr_s;
+CENTER_MIDDLE = paje_cm_s;
+BOT_LEFT = paje_bl_s;
+BOT_RIGHT = paje_br_s;
+BOT_MIDDLE = paje_bm_s;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="10">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Start dance with current move
+
+self.sprite_index = get_move_animation(self.current_move);
+self.image_speed = image_number / (self.anim_speed*room_speed);
+self.image_index = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reset anim
+
+sprite_index = CENTER_MIDDLE;
+image_speed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>draw_self();
+draw_text(x, y - 30, self.current_move);
 </string>
           </argument>
         </arguments>

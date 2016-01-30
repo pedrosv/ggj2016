@@ -39,15 +39,11 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>TOP_LEFT = paje_tl_s;
-TOP_RIGHT = paje_tr_s;
-TOP_MIDDLE = paje_tm_s;
-CENTER_LEFT = paje_cl_s;
-CENTER_RIGHT = paje_cr_s;
-CENTER_MIDDLE = paje_cm_s;
-BOT_LEFT = paje_bl_s;
-BOT_RIGHT = paje_br_s;
-BOT_MIDDLE = paje_bm_s;
+            <string>TOP_RIGHT = char1_tr_s;
+TOP_LEFT = char1_tl_s;
+BOT_RIGHT = char1_br_s;
+BOT_LEFT = char1_bl_s;
+
 </string>
           </argument>
         </arguments>

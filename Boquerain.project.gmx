@@ -6,19 +6,24 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\char1_top_right_s</sprite>
-    <sprite>sprites\char1_top_left_s</sprite>
-    <sprite>sprites\char1_bot_right_s</sprite>
-    <sprite>sprites\char1_bot_left_s</sprite>
-    <sprite>sprites\paje_tl_s</sprite>
-    <sprite>sprites\paje_tr_s</sprite>
-    <sprite>sprites\paje_tm_s</sprite>
-    <sprite>sprites\paje_cr_s</sprite>
-    <sprite>sprites\paje_cm_s</sprite>
-    <sprite>sprites\paje_cl_s</sprite>
-    <sprite>sprites\paje_br_s</sprite>
-    <sprite>sprites\paje_bm_s</sprite>
+    <sprite>sprites\char1_bl_s</sprite>
+    <sprite>sprites\char1_bm_s</sprite>
+    <sprite>sprites\char1_br_s</sprite>
+    <sprite>sprites\char1_cm_s</sprite>
+    <sprite>sprites\char1_cl_s</sprite>
+    <sprite>sprites\char1_cr_s</sprite>
+    <sprite>sprites\char1_tl_s</sprite>
+    <sprite>sprites\char1_tm_s</sprite>
+    <sprite>sprites\char1_tr_s</sprite>
     <sprite>sprites\paje_bl_s</sprite>
+    <sprite>sprites\paje_bm_s</sprite>
+    <sprite>sprites\paje_br_s</sprite>
+    <sprite>sprites\paje_cl_s</sprite>
+    <sprite>sprites\paje_cm_s</sprite>
+    <sprite>sprites\paje_cr_s</sprite>
+    <sprite>sprites\paje_tl_s</sprite>
+    <sprite>sprites\paje_tm_s</sprite>
+    <sprite>sprites\paje_tr_s</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -31,6 +36,7 @@
     </scripts>
     <scripts name="Movements">
       <script>scripts\change_paje_move.gml</script>
+      <script>scripts\change_dancer_move.gml</script>
       <script>scripts\verify_movement.gml</script>
       <script>scripts\generate_new_moves.gml</script>
       <script>scripts\get_current_paje_move.gml</script>
@@ -45,6 +51,7 @@
     <object>objects\dancer_o</object>
     <object>objects\game_controller_o</object>
     <object>objects\paje_o</object>
+    <object>objects\player_o</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main_room</room>
