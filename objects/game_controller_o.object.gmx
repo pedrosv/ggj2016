@@ -106,7 +106,7 @@ if verify_movement(get_current_paje_move(), self.current_move) {
 } else {
     // Lose
     self.correct_moves = 0;
-    audio_play_
+    
 }
 </string>
           </argument>
