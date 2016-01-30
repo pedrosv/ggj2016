@@ -37,7 +37,7 @@ move_streak = 0;
 current_difficulty = 1;
 
 instance_create(3*room_width/4, room_height/2, player_o);
-instance_create(0,0,weir_o);
+instance_create(0, 0, weir_o);
 
 alarm[1] = room_speed;
 </string>
@@ -90,7 +90,6 @@ alarm[0] = get_time_threshold(self.current_difficulty);
           <argument>
             <kind>1</kind>
             <string>/// Change and verify moves
-show_debug_message("OK: " + string(get_current_paje_move()) + " GIVEN: " + string(current_move));
 if verify_movement(get_current_paje_move(), self.current_move) {
     self.correct_moves++;
     if self.correct_moves &gt;= amount {
@@ -100,11 +99,10 @@ if verify_movement(get_current_paje_move(), self.current_move) {
         self.correct_moves = 0;
         self.current_difficulty++;
     }
-    change_paje_move(get_current_paje_move());
 } else {
-    // Lose
     self.correct_moves = 0;
 }
+change_paje_move(get_current_paje_move());
 self.current_move = noone;
 alarm[0] = get_time_threshold(self.current_difficulty);
 

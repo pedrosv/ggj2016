@@ -2,4 +2,4 @@
 
 var dif = argument0;
 
-return 1 + room_speed * dif;
+return 1 + room_speed + (2 * dif);
