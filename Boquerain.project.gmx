@@ -6,24 +6,40 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\char1_bl_s</sprite>
-    <sprite>sprites\char1_bm_s</sprite>
-    <sprite>sprites\char1_br_s</sprite>
-    <sprite>sprites\char1_cm_s</sprite>
-    <sprite>sprites\char1_cl_s</sprite>
-    <sprite>sprites\char1_cr_s</sprite>
-    <sprite>sprites\char1_tl_s</sprite>
-    <sprite>sprites\char1_tm_s</sprite>
-    <sprite>sprites\char1_tr_s</sprite>
-    <sprite>sprites\paje_bl_s</sprite>
-    <sprite>sprites\paje_bm_s</sprite>
-    <sprite>sprites\paje_br_s</sprite>
-    <sprite>sprites\paje_cl_s</sprite>
-    <sprite>sprites\paje_cm_s</sprite>
-    <sprite>sprites\paje_cr_s</sprite>
-    <sprite>sprites\paje_tl_s</sprite>
-    <sprite>sprites\paje_tm_s</sprite>
-    <sprite>sprites\paje_tr_s</sprite>
+    <sprites name="Characters">
+      <sprite>sprites\char1_bl_s</sprite>
+      <sprite>sprites\char1_bm_s</sprite>
+      <sprite>sprites\char1_br_s</sprite>
+      <sprite>sprites\char1_cm_s</sprite>
+      <sprite>sprites\char1_cl_s</sprite>
+      <sprite>sprites\char1_cr_s</sprite>
+      <sprite>sprites\char1_tl_s</sprite>
+      <sprite>sprites\char1_tm_s</sprite>
+      <sprite>sprites\char1_tr_s</sprite>
+      <sprite>sprites\paje_bl_s</sprite>
+      <sprite>sprites\paje_bm_s</sprite>
+      <sprite>sprites\paje_br_s</sprite>
+      <sprite>sprites\paje_cl_s</sprite>
+      <sprite>sprites\paje_cm_s</sprite>
+      <sprite>sprites\paje_cr_s</sprite>
+      <sprite>sprites\paje_tl_s</sprite>
+      <sprite>sprites\paje_tm_s</sprite>
+      <sprite>sprites\paje_tr_s</sprite>
+    </sprites>
+    <sprites name="Commands">
+      <sprite>sprites\command_1_s</sprite>
+      <sprite>sprites\command_6_s</sprite>
+      <sprite>sprites\command_3_s</sprite>
+      <sprite>sprites\command_5_s</sprite>
+      <sprite>sprites\command_2_s</sprite>
+      <sprite>sprites\command_4_s</sprite>
+    </sprites>
+    <sprites name="Menu">
+      <sprite>sprites\play_button_s</sprite>
+      <sprite>sprites\back_button_s</sprite>
+      <sprite>sprites\teste_button_s</sprite>
+      <sprite>sprites\credit_button_s</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -56,10 +72,18 @@
     <object>objects\paje_o</object>
     <object>objects\player_o</object>
     <object>objects\weir_o</object>
+    <objects name="Menu">
+      <object>objects\play_button_o</object>
+      <object>objects\back_button_o</object>
+      <object>objects\teste_button_o</object>
+      <object>objects\credit_button_o</object>
+    </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\main_room</room>
     <room>rooms\main_menu_room</room>
+    <room>rooms\main_room</room>
+    <room>rooms\room_amor</room>
+    <room>rooms\credits_room</room>
   </rooms>
   <constants number="11">
     <constant name="TR">0</constant>
