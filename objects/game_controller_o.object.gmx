@@ -33,6 +33,40 @@ correct_moves = 0;
 
 current_move = noone;
 move_streak = 0;
+
+current_difficulty = 1;
+
+instance_create(room_width/4, room_height/2, paje_o);
+instance_create(3*room_width/4, room_height/2, dancer_o);
+
+alarm[1] = room_speed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Init paje moves
+
+self.movements = generate_new_moves();
+change_paje_move(get_current_paje_move());
+alarm[0] = get_time_threshold(self.current_difficulty);
 </string>
           </argument>
         </arguments>
@@ -61,11 +95,16 @@ if verify_movement(get_current_paje_move(), self.current_move) {
     self.correct_moves++;
     if self.correct_moves &gt;= amount {
         make_it_rain();
-        generate_new_moves();
+        self.movements = generate_new_moves();
         increase_points();
         self.correct_moves = 0;
+        self.current_difficulty++;
     }
     change_paje_move(get_current_paje_move());
+    alarm[0] = get_time_threshold(self.current_difficulty);
+} else {
+    // Lose
+    game_restart();
 }
 </string>
           </argument>

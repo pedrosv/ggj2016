@@ -10,6 +10,15 @@
     <sprite>sprites\char1_top_left_s</sprite>
     <sprite>sprites\char1_bot_right_s</sprite>
     <sprite>sprites\char1_bot_left_s</sprite>
+    <sprite>sprites\paje_tl_s</sprite>
+    <sprite>sprites\paje_tr_s</sprite>
+    <sprite>sprites\paje_tm_s</sprite>
+    <sprite>sprites\paje_cr_s</sprite>
+    <sprite>sprites\paje_cm_s</sprite>
+    <sprite>sprites\paje_cl_s</sprite>
+    <sprite>sprites\paje_br_s</sprite>
+    <sprite>sprites\paje_bm_s</sprite>
+    <sprite>sprites\paje_bl_s</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -20,11 +29,13 @@
     <scripts name="Score">
       <script>scripts\increase_points.gml</script>
     </scripts>
-    <script>scripts\change_paje_move.gml</script>
     <scripts name="Movements">
+      <script>scripts\change_paje_move.gml</script>
       <script>scripts\verify_movement.gml</script>
       <script>scripts\generate_new_moves.gml</script>
       <script>scripts\get_current_paje_move.gml</script>
+      <script>scripts\get_time_threshold.gml</script>
+      <script>scripts\get_move_animation.gml</script>
     </scripts>
     <scripts name="Effects">
       <script>scripts\make_it_rain.gml</script>
@@ -36,8 +47,8 @@
     <object>objects\paje_o</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\main_menu_room</room>
     <room>rooms\main_room</room>
+    <room>rooms\main_menu_room</room>
   </rooms>
   <constants number="11">
     <constant name="TR">0</constant>
