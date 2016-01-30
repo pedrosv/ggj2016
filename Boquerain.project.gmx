@@ -49,6 +49,7 @@
     </scripts>
     <scripts name="Score">
       <script>scripts\increase_points.gml</script>
+      <script>scripts\get_difficulty.gml</script>
     </scripts>
     <scripts name="Movements">
       <script>scripts\change_paje_move.gml</script>
@@ -64,6 +65,7 @@
     </scripts>
     <scripts name="Weir">
       <script>scripts\flood_weir.gml</script>
+      <script>scripts\get_weir_percent.gml</script>
     </scripts>
   </scripts>
   <objects name="objects">
@@ -85,7 +87,8 @@
     <room>rooms\room_amor</room>
     <room>rooms\credits_room</room>
   </rooms>
-  <constants number="11">
+  <constants number="12">
+    <constant name="RAIN_AMOUNT">20</constant>
     <constant name="TR">0</constant>
     <constant name="RIGHT">1</constant>
     <constant name="WRONG">0</constant>

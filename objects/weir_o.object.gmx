@@ -51,7 +51,8 @@ alarm[0] = room_speed;
           <argument>
             <kind>1</kind>
             <string>/// Dry weir
-self.percentage -= self.drying_speed;
+self.percentage -= self.drying_speed * (1 + 0.2 * get_difficulty());
+alarm[0] = room_speed;
 </string>
           </argument>
         </arguments>
