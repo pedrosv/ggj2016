@@ -25,17 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>UPPER_RIGHT = char1_top_right_s;
-UPPER_LEFT = char1_top_left_s;
-BOT_RIGHT = char1_bot_right_s;
-BOT_LEFT = char1_bot_left_s;
-
-current_move = noone;
-
-movements = ds_list_create();
-amount = 4;
-current_moves = ds_map_create();
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

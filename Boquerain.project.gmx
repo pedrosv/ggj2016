@@ -18,11 +18,16 @@
   </scripts>
   <objects name="objects">
     <object>objects\dancer_o</object>
+    <object>objects\game_controller_o</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main_menu_room</room>
     <room>rooms\main_room</room>
   </rooms>
+  <constants number="2">
+    <constant name="RIGHT">1</constant>
+    <constant name="WRONG">0</constant>
+  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>
