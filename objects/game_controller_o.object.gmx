@@ -100,6 +100,7 @@ if verify_movement(get_current_paje_move(), self.current_move) {
 } else {
     // Reset correct moves count
     self.correct_moves = 0;
+    change_paje_move(get_current_paje_move());
 }
 self.current_move = noone;
 alarm[0] = get_time_threshold(self.current_difficulty);
