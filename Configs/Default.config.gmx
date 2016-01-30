@@ -632,5 +632,12 @@
     <option_xbone_texture_page>1024</option_xbone_texture_page>
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
-  <ConfigConstants/>
+  <ConfigConstants>
+    <constants number="4">
+      <constant name="TOP_LEFT_CTRL">"Q"</constant>
+      <constant name="TOP_RIGHT_CTRL">"E"</constant>
+      <constant name="BOT_LEFT_CTRL">"D"</constant>
+      <constant name="BOT_RIGHT_CTRL">"C"</constant>
+    </constants>
+  </ConfigConstants>
 </Config>

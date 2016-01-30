@@ -15,6 +15,7 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\verify_movements.gml</script>
+    <script>scripts\verify_input.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\dancer_o</object>
@@ -24,9 +25,18 @@
     <room>rooms\main_menu_room</room>
     <room>rooms\main_room</room>
   </rooms>
-  <constants number="2">
+  <constants number="11">
+    <constant name="TR">0</constant>
     <constant name="RIGHT">1</constant>
     <constant name="WRONG">0</constant>
+    <constant name="TM">1</constant>
+    <constant name="TL">2</constant>
+    <constant name="MR">3</constant>
+    <constant name="MM">4</constant>
+    <constant name="ML">5</constant>
+    <constant name="BR">6</constant>
+    <constant name="BM">7</constant>
+    <constant name="BL">8</constant>
   </constants>
   <help>
     <rtf>help.rtf</rtf>
