@@ -18,6 +18,4 @@ if keyboard_check_pressed(ord(TOP_RIGHT_CTRL)) {
     self.current_move = CR;
 } else if keyboard_check_pressed(ord(CENTER_MIDDLE_CTRL)) {
     self.current_move = CM;
-} else {
-    self.current_move = noone;
 }
