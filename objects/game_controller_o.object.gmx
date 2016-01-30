@@ -27,11 +27,46 @@
             <kind>1</kind>
             <string>/// Initializing attributes
 
-current_move = noone;
-
 movements = ds_list_create();
 amount = 4;
-current_movs = ds_list_create();
+correct_moves = 0;
+
+current_move = noone;
+move_streak = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Change and verify moves
+
+if verify_movement(get_current_paje_move(), self.current_move) {
+    self.correct_moves++;
+    if self.correct_moves &gt;= amount {
+        make_it_rain();
+        generate_new_moves();
+        increase_points();
+        self.correct_moves = 0;
+    }
+    change_paje_move(get_current_paje_move());
+}
 </string>
           </argument>
         </arguments>

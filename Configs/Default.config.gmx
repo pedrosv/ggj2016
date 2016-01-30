@@ -633,11 +633,16 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="4">
+    <constants number="9">
       <constant name="TOP_LEFT_CTRL">"Q"</constant>
+      <constant name="TOP_MIDDLE_CTRL">"W"</constant>
       <constant name="TOP_RIGHT_CTRL">"E"</constant>
       <constant name="BOT_LEFT_CTRL">"D"</constant>
       <constant name="BOT_RIGHT_CTRL">"C"</constant>
+      <constant name="BOT_MIDDLE_CTRL">"X"</constant>
+      <constant name="CENTER_LEFT_CTRL">"A"</constant>
+      <constant name="CENTER_RIGHT_CTRL">"D"</constant>
+      <constant name="CENTER_MIDDLE_CTRL">"S"</constant>
     </constants>
   </ConfigConstants>
 </Config>

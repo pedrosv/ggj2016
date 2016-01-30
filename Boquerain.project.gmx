@@ -14,12 +14,26 @@
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\verify_movements.gml</script>
-    <script>scripts\verify_input.gml</script>
+    <scripts name="Input">
+      <script>scripts\verify_input.gml</script>
+    </scripts>
+    <scripts name="Score">
+      <script>scripts\increase_points.gml</script>
+    </scripts>
+    <script>scripts\change_paje_move.gml</script>
+    <scripts name="Movements">
+      <script>scripts\verify_movement.gml</script>
+      <script>scripts\generate_new_moves.gml</script>
+      <script>scripts\get_current_paje_move.gml</script>
+    </scripts>
+    <scripts name="Effects">
+      <script>scripts\make_it_rain.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\dancer_o</object>
     <object>objects\game_controller_o</object>
+    <object>objects\paje_o</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main_menu_room</room>
@@ -31,9 +45,9 @@
     <constant name="WRONG">0</constant>
     <constant name="TM">1</constant>
     <constant name="TL">2</constant>
-    <constant name="MR">3</constant>
-    <constant name="MM">4</constant>
-    <constant name="ML">5</constant>
+    <constant name="CR">3</constant>
+    <constant name="CM">4</constant>
+    <constant name="CL">5</constant>
     <constant name="BR">6</constant>
     <constant name="BM">7</constant>
     <constant name="BL">8</constant>
