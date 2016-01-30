@@ -93,16 +93,12 @@ alarm[0] = get_time_threshold(self.current_difficulty);
 show_debug_message("OK: " + string(get_current_paje_move()) + " GIVEN: " + string(current_move));
 if verify_movement(get_current_paje_move(), self.current_move) {
     self.correct_moves++;
-    if self.correct_moves &gt;= amount {
-        make_it_rain();
-        self.movements = generate_new_moves();
-        increase_points();
-        self.correct_moves = 0;
-        self.current_difficulty++;
+    if self.correct_moves &gt;= amount { // Won, go to next round
+        init_next_round();
     }
     change_paje_move(get_current_paje_move());
 } else {
-    // Lose
+    // Reset correct moves count
     self.correct_moves = 0;
 }
 self.current_move = noone;
