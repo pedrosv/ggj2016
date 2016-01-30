@@ -46,12 +46,16 @@
     <scripts name="Effects">
       <script>scripts\make_it_rain.gml</script>
     </scripts>
+    <scripts name="Weir">
+      <script>scripts\flood_weir.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\dancer_o</object>
     <object>objects\game_controller_o</object>
     <object>objects\paje_o</object>
     <object>objects\player_o</object>
+    <object>objects\weir_o</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\main_room</room>
