@@ -67,6 +67,9 @@
       <script>scripts\flood_weir.gml</script>
       <script>scripts\get_weir_percent.gml</script>
     </scripts>
+    <scripts name="Gameplay">
+      <script>scripts\init_next_round.gml</script>
+    </scripts>
   </scripts>
   <objects name="objects">
     <object>objects\dancer_o</object>

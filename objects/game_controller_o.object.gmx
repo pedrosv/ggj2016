@@ -92,15 +92,13 @@ alarm[0] = get_time_threshold(self.current_difficulty);
             <string>/// Change and verify moves
 if verify_movement(get_current_paje_move(), self.current_move) {
     self.correct_moves++;
-    if self.correct_moves &gt;= amount {
-        make_it_rain();
-        self.movements = generate_new_moves();
-        increase_points();
-        self.correct_moves = 0;
-        self.current_difficulty++;
+    if self.correct_moves &gt;= amount { // Won, go to next round
+        init_next_round();
     }
 } else {
+    // Reset correct moves count
     self.correct_moves = 0;
+    change_paje_move(get_current_paje_move()); // Reset the current sequence to the first step
 }
 change_paje_move(get_current_paje_move());
 self.current_move = noone;
