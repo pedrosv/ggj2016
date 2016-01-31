@@ -12,7 +12,10 @@
   <showcolour>-1</showcolour>
   <code>instance_create(room_width/2, 1*room_height/4, play_button_o);
 instance_create(room_width/2, 2*room_height/4, tutorial_button_o);
-instance_create(room_width/2, 3*room_height/4, credit_button_o);</code>
+instance_create(room_width/2, 3*room_height/4, credit_button_o);
+
+audio_stop_all();
+audio_play_sound(menu_song, 1, true);</code>
   <enableViews>0</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>

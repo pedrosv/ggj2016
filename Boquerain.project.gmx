@@ -10,6 +10,7 @@
     <sound>sound\rain_snd</sound>
     <sound>sound\defeat_snd</sound>
     <sound>sound\main_song</sound>
+    <sound>sound\menu_song</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
