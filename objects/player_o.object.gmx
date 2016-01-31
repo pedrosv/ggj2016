@@ -41,9 +41,13 @@
             <kind>1</kind>
             <string>TOP_RIGHT = char1_tr_s;
 TOP_LEFT = char1_tl_s;
+TOP_MIDDLE = char1_tm_s;
 BOT_RIGHT = char1_br_s;
 BOT_LEFT = char1_bl_s;
-
+BOT_MIDDLE = char1_bm_s;
+CENTER_LEFT = char1_cl_s;
+CENTER_RIGHT = char1_cr_s;
+CENTER_MIDDLE = char1_cm_s;
 </string>
           </argument>
         </arguments>

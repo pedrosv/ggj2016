@@ -98,7 +98,7 @@ if verify_movement(get_current_paje_move(), self.current_move) {
 } else {
     // Reset correct moves count
     self.correct_moves = 0;
-    change_paje_move(get_current_paje_move()); // Reset the current sequence to the first step
+    change_paje_move(get_current_paje_move());
 }
 change_paje_move(get_current_paje_move());
 self.current_move = noone;
