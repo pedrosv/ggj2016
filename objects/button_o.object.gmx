@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>text = "No Text";
+            <string>text = "";
 my_room = noone;
 image_off = 0;
 top_off = 6; // Pixels
@@ -134,8 +134,7 @@ if self.my_room != noone {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
-draw_sprite(button_s, 0, x, y+image_off);
+            <string>draw_sprite(sprite_index, 0, x, y+image_off);
 set_text_draw(menu_font, c_purple, fa_center, fa_middle);
 draw_text(x, y+image_off, self.text);
 </string>
