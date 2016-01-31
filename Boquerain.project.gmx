@@ -52,7 +52,9 @@
     </sprites>
     <sprite>sprites\drop_s</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\main_bkg</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <scripts name="Input">
@@ -103,6 +105,7 @@
       <object>objects\weir_o</object>
       <object>objects\rain_o</object>
       <object>objects\drop_o</object>
+      <object>objects\tutorial_o</object>
     </objects>
     <objects name="Game over">
       <object>objects\game_over_o</object>
@@ -114,6 +117,7 @@
     <room>rooms\room_amor</room>
     <room>rooms\credits_room</room>
     <room>rooms\game_over_room</room>
+    <room>rooms\how_to_play_room</room>
   </rooms>
   <constants number="13">
     <constant name="BASE_DRY_SPD">1</constant>
