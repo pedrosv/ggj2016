@@ -76,8 +76,7 @@ instance_create(room_width/2, room_height/4, play_again_o);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>set_text_draw(game_over_font, c_white, fa_center, fa_middle);
-//draw_text(room_width/2, room_height* 2/3, "Score: " +  string(score));
+            <string>set_text_draw(game_over_font, c_white, fa_left, fa_middle);
 
 draw_sprite(gameover_text, 0, room_width/2, room_height/2);
 draw_sprite(gameover_text, 1, room_width*3/5 - 50, room_height*2/3 + 50);
