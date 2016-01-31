@@ -56,6 +56,7 @@
       <sprite>sprites\start_but_s</sprite>
       <sprite>sprites\credits_but_s</sprite>
       <sprite>sprites\controls_s</sprite>
+      <sprite>sprites\back_s</sprite>
     </sprites>
     <sprite>sprites\drop_s</sprite>
   </sprites>
@@ -105,12 +106,13 @@
   </fonts>
   <objects name="objects">
     <objects name="Menu">
-      <object>objects\play_button_o</object>
       <object>objects\back_button_o</object>
       <object>objects\tutorial_button_o</object>
       <object>objects\credit_button_o</object>
       <object>objects\button_o</object>
       <object>objects\credit_controller_o</object>
+      <object>objects\play_again_o</object>
+      <object>objects\tutorial_o</object>
     </objects>
     <objects name="Game">
       <object>objects\game_controller_o</object>
@@ -118,13 +120,12 @@
       <object>objects\movement_generator_o</object>
       <object>objects\weir_o</object>
       <object>objects\drop_o</object>
-      <object>objects\tutorial_o</object>
       <object>objects\game_starter_o</object>
       <object>objects\rain_o</object>
     </objects>
     <objects name="Game over">
       <object>objects\game_over_o</object>
-      <object>objects\play_again_o</object>
+      <object>objects\play_button_o</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -135,7 +136,8 @@
     <room>rooms\game_over_room</room>
     <room>rooms\how_to_play_room</room>
   </rooms>
-  <constants number="14">
+  <constants number="15">
+    <constant name="DRY_INCREASE">0.5</constant>
     <constant name="RAIN_DUR">3</constant>
     <constant name="BASE_DRY_SPD">1</constant>
     <constant name="ALPHA_UPDATE">5</constant>

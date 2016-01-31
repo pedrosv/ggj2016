@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="tutorial_o" x="0" y="0" name="inst_6D5B2F53" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="back_button_o" x="64" y="320" name="inst_C17D856A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="back_button_o" x="96" y="320" name="inst_C17D856A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

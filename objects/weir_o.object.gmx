@@ -79,7 +79,7 @@ fill_dur = RAIN_DUR; // In seconds
 if filling {
     self.percentage += RAIN_AMOUNT / self.fill_dur;
 } else {    
-    self.percentage -= self.drying_speed * (0.8 + 0.2 * get_difficulty());
+    self.percentage -= self.drying_speed * (0.5 + DRY_INCREASE * get_difficulty());
 }
 alarm[0] = room_speed;
 </string>
@@ -109,8 +109,10 @@ var drw_img = floor(get_weir_percent()/100 * sprite_get_number(water_level_s));
 var off = sprite_get_height(water_level_s)/2 + 30;
 var cx = room_width - off;
 var cy = room_height - off;
+
 draw_sprite_ext(water_level_s, drw_img, cx, cy, 1, 1, 0, c_white, 1);
-set_text_draw(HUD_font, $40B050, fa_center, fa_middle);
+
+set_text_draw(HUD_font, c_white, fa_center, fa_middle);
 draw_text(cx, cy-off-30, "Volume atual: " + string(floor(get_weir_percent())) + "%");
 </string>
           </argument>
