@@ -50,7 +50,8 @@
             <kind>1</kind>
             <string>set_text_draw(game_over_font, c_red, fa_center, fa_middle);
 
-draw_text(player.x - 50, player.y, TOP_LEFT_CTRL);
+show_debug_message(player.sprite_width);
+draw_text(player.x - player.sprite_width, player.y, TOP_LEFT_CTRL);
 //draw_text(room_width/3 + room_width/1.5, room_height*4/15, TOP_MIDDLE_CTRL);
 //draw_text(room_width, room_height*5/15, TOP_RIGHT_CTRL);
 </string>
