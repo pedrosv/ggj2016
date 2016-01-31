@@ -25,14 +25,14 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>player = instance_create(room_width/2, room_height*8/15, player_o);
+            <string>player = instance_create(room_width/2, room_height*7/15, player_o);
 
 mvs = ds_list_create();
 ds_list_add(mvs, TL, TM, TR, CL, CR, BL, BM, BR);
 
 index = 0;
 
-alarm[0] = room_speed * 1
+alarm[0] = room_speed * 1;
 </string>
           </argument>
         </arguments>
@@ -60,7 +60,7 @@ if (index &gt; 7) {
     index = 0;
 }
 
-alarm[0] = 1 * room_speed
+alarm[0] = 1 * room_speed;
 </string>
           </argument>
         </arguments>
@@ -105,10 +105,14 @@ draw_text(player.x + dist*dcos(bra), player.y - dist*dsin(bra), BOT_RIGHT_CTRL);
 draw_text(player.x + dist*dcos(bma), player.y - dist*dsin(bma), BOT_MIDDLE_CTRL);
 
 var next_move = mvs[|self.index];
+var ang = get_tut_angle(next_move);
 
-draw_sprite(get_move_animation(next_move), 0, self.player.x, self.player.y);
-
-show_debug_message("nxt_m: " + string(next_move));
+with self.player {
+    current_move = next_move;
+    draw_set_colour(c_orange);
+    var d = 6*dist/7;
+    draw_arrow(x, y, x+d*dcos(ang), y-d*dsin(ang), 15);
+}
 </string>
           </argument>
         </arguments>

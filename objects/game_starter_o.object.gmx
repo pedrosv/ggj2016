@@ -86,7 +86,7 @@ if(count &gt;= 0){
           <argument>
             <kind>1</kind>
             <string>draw_self();
-
+set_text_draw(game_over_font, $50CF80, fa_center, fa_middle);
 if(count &gt; 3){
     draw_text(x, y, "Prepare-se ...");
 }
