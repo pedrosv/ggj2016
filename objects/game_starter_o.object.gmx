@@ -56,11 +56,9 @@ alarm[0] = room_speed;
             <string>///start game
 
 if(count &gt;= 0){
-count --;
-alarm[0] = room_speed;
-}
-
-else{
+    count--;
+    alarm[0] = room_speed;
+} else {
     instance_create(self.x, self.y, game_controller_o);
     instance_destroy();
 }
@@ -96,7 +94,7 @@ else if(count &gt; 0){
     draw_text(x, y, count);
 }
 else {
-    draw_text(x, y, "START!!!");
+    draw_text(x, y, "Simbora!");
 }
 </string>
           </argument>

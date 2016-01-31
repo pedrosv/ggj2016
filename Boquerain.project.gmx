@@ -50,6 +50,7 @@
     <sprites name="GUI">
       <sprite>sprites\border_s</sprite>
       <sprite>sprites\button_s</sprite>
+      <sprite>sprites\water_level_s</sprite>
     </sprites>
     <sprite>sprites\drop_s</sprite>
   </sprites>
@@ -92,6 +93,7 @@
   <fonts name="fonts">
     <font>fonts\game_over_font</font>
     <font>fonts\menu_font</font>
+    <font>fonts\HUD_font</font>
   </fonts>
   <objects name="objects">
     <objects name="Menu">
