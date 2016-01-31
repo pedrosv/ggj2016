@@ -26,11 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>text = "BOQUERAIN SECOU! TODO MUNDO MORREU DE SEDE =("
-duration = 3; // In seconds
 
 audio_play_sound(defeat_snd, 1, false);
 
-alarm[0] = duration * room_speed;
+instance_create(room_width/2, 3*room_height/4, play_again_o);
+
 </string>
           </argument>
         </arguments>
@@ -78,6 +78,7 @@ alarm[0] = duration * room_speed;
             <kind>1</kind>
             <string>set_text_draw(game_over_font, c_red, fa_center, fa_middle);
 draw_text(room_width/2, room_height/2, self.text);
+draw_text(room_width/2, room_height* 2/3, "Score: " +  string(score));
 </string>
           </argument>
         </arguments>

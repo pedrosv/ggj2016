@@ -51,6 +51,7 @@
       <sprite>sprites\border_s</sprite>
       <sprite>sprites\button_s</sprite>
       <sprite>sprites\water_level_s</sprite>
+      <sprite>sprites\play_again_s</sprite>
     </sprites>
     <sprite>sprites\drop_s</sprite>
   </sprites>
@@ -108,13 +109,14 @@
       <object>objects\player_o</object>
       <object>objects\movement_generator_o</object>
       <object>objects\weir_o</object>
-      <object>objects\rain_o</object>
       <object>objects\drop_o</object>
       <object>objects\tutorial_o</object>
       <object>objects\game_starter_o</object>
     </objects>
+    <object>objects\rain_o</object>
     <objects name="Game over">
       <object>objects\game_over_o</object>
+      <object>objects\play_again_o</object>
     </objects>
   </objects>
   <rooms name="rooms">
