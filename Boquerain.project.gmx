@@ -4,7 +4,11 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\got_it_right_snd</sound>
+    <sound>sound\got_it_wrong_snd</sound>
+    <sound>sound\rain_snd</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
       <sprite>sprites\char1_bl_s</sprite>
@@ -41,6 +45,9 @@
       <sprite>sprites\teste_button_s</sprite>
       <sprite>sprites\credit_button_s</sprite>
     </sprites>
+    <sprites name="GUI">
+      <sprite>sprites\border_s</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -60,16 +67,15 @@
       <script>scripts\get_time_to_expire.gml</script>
       <script>scripts\get_move_animation.gml</script>
     </scripts>
-    <scripts name="Effects">
-      <script>scripts\make_it_rain.gml</script>
-    </scripts>
     <scripts name="Weir">
       <script>scripts\flood_weir.gml</script>
       <script>scripts\get_weir_percent.gml</script>
     </scripts>
     <scripts name="Gameplay">
+      <script>scripts\make_it_rain.gml</script>
       <script>scripts\init_next_round.gml</script>
       <script>scripts\got_it_wrong.gml</script>
+      <script>scripts\completed_ritual.gml</script>
       <script>scripts\got_it_right.gml</script>
     </scripts>
   </scripts>

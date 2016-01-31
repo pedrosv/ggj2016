@@ -70,7 +70,7 @@ if verify_input() {
     var given = self.player.current_move;
     
     if(verify_movement(correct, given)){
-        next_ritual_move();  
+        got_it_right();  
     } else {
         got_it_wrong();
     }

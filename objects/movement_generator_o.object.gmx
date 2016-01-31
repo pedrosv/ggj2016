@@ -68,6 +68,7 @@ alarm[0] = get_time_to_expire();
             <string>/// Reset ritual if player took too long
 self.current_movement = 0;
 alarm[0] = get_time_to_expire();
+audio_play_sound(got_it_wrong_snd, 1, false);
 </string>
           </argument>
         </arguments>
@@ -91,8 +92,13 @@ alarm[0] = get_time_to_expire();
           <argument>
             <kind>1</kind>
             <string>var current_spr = get_move_animation(get_current_ritual_move());
-draw_sprite_ext(current_spr, image_index, x, y, 0.25, 0.25, 0, c_white, image_alpha);
+var spr_scale = 0.25;
+draw_sprite_ext(current_spr, image_index, x, y, spr_scale, spr_scale, 0, c_white, image_alpha);
 
+var space = 80;
+var border_xs = (sprite_get_width(current_spr) + space)*spr_scale / sprite_get_width(border_s); // Border X Scale
+var border_ys = (sprite_get_height(current_spr) + space)*spr_scale / sprite_get_height(border_s); // Border Y Scale
+draw_sprite_ext(border_s, 0, x, y, border_xs, border_ys, 0, c_white, 1);
 </string>
           </argument>
         </arguments>

@@ -6,5 +6,5 @@ with movement_generator_o {
 }
 
 if self.move_control.current_movement >= ds_list_size(self.move_control.ritual_list) {
-    got_it_right();
+    completed_ritual();
 }

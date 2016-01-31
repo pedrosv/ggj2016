@@ -116,7 +116,6 @@ alarm[0] = get_time_to_expire();
           <argument>
             <kind>1</kind>
             <string>draw_sprite(get_move_animation(self.current_move), 0, x, y);
-draw_text(x, y - 30, self.current_move);
 </string>
           </argument>
         </arguments>
