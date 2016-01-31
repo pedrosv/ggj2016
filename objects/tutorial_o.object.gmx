@@ -105,8 +105,8 @@ draw_sprite(spr_E, image_index, player.x + dist*dcos(tra), player.y - dist*dsin(
 draw_sprite(spr_A, image_index, player.x + dist*dcos(cla), player.y - dist*dsin(cla));
 draw_sprite(spr_D, image_index, player.x + dist*dcos(cra), player.y - dist*dsin(cra));
 draw_sprite(spr_Z, image_index, player.x + dist*dcos(bla), player.y - dist*dsin(bla));
-draw_sprite(spr_X, image_index, player.x + dist*dcos(bra), player.y - dist*dsin(bra));
-draw_sprite(spr_C, image_index, player.x + dist*dcos(bma), player.y - dist*dsin(bma));
+draw_sprite(spr_C, image_index, player.x + dist*dcos(bra), player.y - dist*dsin(bra));
+draw_sprite(spr_X, image_index, player.x + dist*dcos(bma), player.y - dist*dsin(bma));
 
 var next_move = mvs[|self.index];
 var ang = get_tut_angle(next_move);
