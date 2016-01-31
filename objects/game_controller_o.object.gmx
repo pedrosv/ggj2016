@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>/// Initializing attributes
 
-
+randomize();
 move_streak = 0;
 
 current_difficulty = 1;
