@@ -9,6 +9,7 @@
     <sound>sound\got_it_wrong_snd</sound>
     <sound>sound\rain_snd</sound>
     <sound>sound\defeat_snd</sound>
+    <sound>sound\main_song</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
