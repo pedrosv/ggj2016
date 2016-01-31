@@ -101,7 +101,7 @@ alarm[0] = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_sprite(rnd_spr, 0, cur_x-off, room_height-sprite_get_height(char1_wrong_s)/2);
+            <string>draw_sprite_ext(rnd_spr, 0, cur_x-off, room_height-sprite_get_height(char1_wrong_s)/2, 0.5, 0.5, 0, c_white, 1);
 </string>
           </argument>
         </arguments>
