@@ -52,6 +52,7 @@
   </views>
   <instances>
     <instance objName="game_starter_o" x="640" y="384" name="inst_5A42245E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="back_button_o" x="1184" y="96" name="inst_2AC8A9A2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
