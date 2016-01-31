@@ -51,7 +51,10 @@ alarm[0] = room_speed;
           <argument>
             <kind>1</kind>
             <string>/// Dry weir
-self.percentage -= self.drying_speed * (1 + 0.2 * get_difficulty());
+self.percentage -= self.drying_speed * (0.8 + 0.2 * get_difficulty());
+if percentage &lt;= 0 {
+    game_restart();
+}
 alarm[0] = room_speed;
 </string>
           </argument>
