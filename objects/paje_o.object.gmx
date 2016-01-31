@@ -37,14 +37,16 @@ BOT_MIDDLE = paje_bm_s;
 
 self.level = 1;
 current_movement = 0;
+time_to_expire = 1 ;//seconds
 
 ritual_list = generate_new_moves(level);
+alarm[0] = room_speed * time_to_expire;
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="0">
+    <event eventtype="2" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -61,7 +63,9 @@ ritual_list = generate_new_moves(level);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//get_move_animation(self.ritual_list[|current_movement]);
+            <string>///If you take too long to choose a movement
+self.current_movement = 0;
+alarm[0] = room_speed * time_to_expire;
 </string>
           </argument>
         </arguments>

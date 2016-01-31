@@ -1,9 +1,16 @@
-/// change_paje_move(current_move)
+/// change_paje_move(paje_instance)
 
-var move = argument0;
-var dur = get_time_threshold(self.current_difficulty);
-with paje_o {
-    self.current_move = move;
-    self.anim_speed = dur;
-    event_user(0); // Dance event
+var paje = argument0;
+    paje.alarm[0] = room_speed * paje.time_to_expire;
+    if(paje.current_movement == ds_list_size(paje.ritual_list) -1){
+        increase_points();
+        paje.level++;
+        paje.ritual_list = generate_new_moves(level)
+        paje.current_movement = 0;
+        show_debug_message("sai dae");
+    }
+    else{
+        paje.current_movement ++;
+        show_debug_message("sai dae");
+    }
 }

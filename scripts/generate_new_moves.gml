@@ -1,6 +1,6 @@
 /// generate_new_moves(level)
 
-level = argument0 + 3;
+var level = argument0 + 3;
 
 var mvs = ds_list_create();
 for(var i = 0; i < level; i++) {

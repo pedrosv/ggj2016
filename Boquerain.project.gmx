@@ -53,7 +53,6 @@
     </scripts>
     <scripts name="Movements">
       <script>scripts\change_paje_move.gml</script>
-      <script>scripts\change_dancer_move.gml</script>
       <script>scripts\verify_movement.gml</script>
       <script>scripts\generate_new_moves.gml</script>
       <script>scripts\get_current_paje_move.gml</script>
