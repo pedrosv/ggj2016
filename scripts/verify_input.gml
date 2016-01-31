@@ -1,5 +1,6 @@
 ///verify_input()
 
+var received_input = true;
 if keyboard_check_pressed(ord(TOP_RIGHT_CTRL)) {
     self.player.current_move = TR;
 } else if keyboard_check_pressed(ord(TOP_LEFT_CTRL)) {
@@ -18,6 +19,9 @@ if keyboard_check_pressed(ord(TOP_RIGHT_CTRL)) {
     self.player.current_move = CR;
 } else if keyboard_check_pressed(ord(CENTER_MIDDLE_CTRL)) {
     self.player.current_move = CM;
+} else {
+    received_input = false;
 }
+return received_input;
 
 

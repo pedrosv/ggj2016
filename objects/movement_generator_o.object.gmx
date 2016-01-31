@@ -5,7 +5,7 @@
   <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
-  <parentName>player_o</parentName>
+  <parentName>self</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>TOP_LEFT = paje_tl_s;
+            <string>// Ritual movement sprites
+TOP_LEFT = paje_tl_s;
 TOP_RIGHT = paje_tr_s;
 TOP_MIDDLE = paje_tm_s;
 CENTER_LEFT = paje_cl_s;
@@ -34,13 +35,14 @@ CENTER_MIDDLE = paje_cm_s;
 BOT_LEFT = paje_bl_s;
 BOT_RIGHT = paje_br_s;
 BOT_MIDDLE = paje_bm_s;
+WRONG = char1_wrong_s;
 
-self.level = 1;
+// Ritual movements and the current movement being displayed
+ritual_list = generate_new_moves();
 current_movement = 0;
-time_to_expire = 1 ;//seconds
 
-ritual_list = generate_new_moves(level);
-alarm[0] = room_speed * time_to_expire;
+// Initialize movement
+alarm[0] = get_time_to_expire();
 </string>
           </argument>
         </arguments>
@@ -63,9 +65,9 @@ alarm[0] = room_speed * time_to_expire;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///If you take too long to choose a movement
+            <string>/// Reset ritual if player took too long
 self.current_movement = 0;
-alarm[0] = room_speed * time_to_expire;
+alarm[0] = get_time_to_expire();
 </string>
           </argument>
         </arguments>
@@ -88,8 +90,8 @@ alarm[0] = room_speed * time_to_expire;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var current_spr = get_move_animation(self.ritual_list[|current_movement]);
-draw_sprite_ext(current_spr,image_index,x, y, 0.25, 0.25, 0, c_white, image_alpha);
+            <string>var current_spr = get_move_animation(get_current_ritual_move());
+draw_sprite_ext(current_spr, image_index, x, y, 0.25, 0.25, 0, c_white, image_alpha);
 
 </string>
           </argument>

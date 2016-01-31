@@ -32,7 +32,7 @@ move_streak = 0;
 current_difficulty = 1;
 
 player = instance_create(3*room_width/4, room_height/2, player_o);
-paje = instance_create(room_width/2, room_height *4/5, paje_o);
+move_control = instance_create(room_width/2, room_height *4/5, movement_generator_o);
 weir = instance_create(0, 0, weir_o);
 
 
@@ -59,43 +59,23 @@ weir = instance_create(0, 0, weir_o);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//get input and change player animation
-verify_input();
+            <string>/// Verify input and compare player and ritual moves
 
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>//check if player moviment is correct
-var correct = self.paje.ritual_list[|self.paje.current_movement];
-var given = self.player.current_move;
-
-if(verify_movement(correct, given)){
-    change_paje_move(self.paje);
+if verify_input() {
+    with player_o {
+        event_user(0);
+    }
     
-}else{
-    //reset paje movement
-    self.paje.current_movement = 0;
+    var correct = get_current_ritual_move();
+    var given = self.player.current_move;
+    
+    if(verify_movement(correct, given)){
+        next_ritual_move();  
+    } else {
+        got_it_wrong();
+    }
 }
+
 </string>
           </argument>
         </arguments>

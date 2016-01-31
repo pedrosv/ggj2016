@@ -36,6 +36,35 @@ BOT_MIDDLE = char1_bm_s;
 CENTER_LEFT = char1_cl_s;
 CENTER_RIGHT = char1_cr_s;
 CENTER_MIDDLE = char1_cm_s;
+WRONG = char1_wrong_s;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Reset animation
+
+sprite_index = CENTER_MIDDLE;
+image_speed = 0;
+image_index = 0;
+self.current_move = noone;
 </string>
           </argument>
         </arguments>
@@ -61,35 +90,9 @@ CENTER_MIDDLE = char1_cm_s;
             <string>/// Start dance with current move
 
 self.sprite_index = get_move_animation(self.current_move);
-self.image_speed = image_number / (self.anim_speed*room_speed);
 self.image_index = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="7" enumb="7">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Reset anim
 
-sprite_index = CENTER_MIDDLE;
-image_speed = 0;
-self.current_move = noone;
+alarm[0] = get_time_to_expire();
 </string>
           </argument>
         </arguments>
