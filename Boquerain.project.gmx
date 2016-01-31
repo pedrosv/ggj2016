@@ -79,6 +79,7 @@
     <background>background\gameover_bkg</background>
     <background>background\credit_bg</background>
     <background>background\menu_bkg</background>
+    <background>background\splash_scr</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -127,6 +128,7 @@
       <object>objects\credit_controller_o</object>
       <object>objects\play_again_o</object>
       <object>objects\tutorial_o</object>
+      <object>objects\splash_o</object>
     </objects>
     <objects name="Game">
       <object>objects\game_controller_o</object>
@@ -143,6 +145,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\splash_room</room>
     <room>rooms\main_menu_room</room>
     <room>rooms\main_room</room>
     <room>rooms\room_amor</room>
