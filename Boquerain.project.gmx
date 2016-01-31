@@ -50,6 +50,7 @@
     <sprites name="GUI">
       <sprite>sprites\border_s</sprite>
     </sprites>
+    <sprite>sprites\drop_s</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -100,6 +101,8 @@
       <object>objects\player_o</object>
       <object>objects\movement_generator_o</object>
       <object>objects\weir_o</object>
+      <object>objects\rain_o</object>
+      <object>objects\drop_o</object>
     </objects>
     <objects name="Game over">
       <object>objects\game_over_o</object>
