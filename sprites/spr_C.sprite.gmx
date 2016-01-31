@@ -7,10 +7,10 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>35</bbox_left>
-  <bbox_right>88</bbox_right>
+  <bbox_left>45</bbox_left>
+  <bbox_right>79</bbox_right>
   <bbox_top>12</bbox_top>
-  <bbox_bottom>114</bbox_bottom>
+  <bbox_bottom>113</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -20,6 +20,6 @@
   <width>138</width>
   <height>138</height>
   <frames>
-    <frame index="0">images\spr_W_0.png</frame>
+    <frame index="0">images\spr_C_0.png</frame>
   </frames>
 </sprite>
