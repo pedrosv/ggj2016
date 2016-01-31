@@ -96,7 +96,7 @@
     <objects name="Menu">
       <object>objects\play_button_o</object>
       <object>objects\back_button_o</object>
-      <object>objects\teste_button_o</object>
+      <object>objects\tutorial_button_o</object>
       <object>objects\credit_button_o</object>
       <object>objects\button_o</object>
     </objects>
@@ -121,7 +121,8 @@
     <room>rooms\game_over_room</room>
     <room>rooms\how_to_play_room</room>
   </rooms>
-  <constants number="13">
+  <constants number="14">
+    <constant name="RAIN_DUR">3</constant>
     <constant name="BASE_DRY_SPD">1</constant>
     <constant name="ALPHA_UPDATE">5</constant>
     <constant name="WR">9</constant>

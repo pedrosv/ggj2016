@@ -29,7 +29,7 @@
 drying_speed = BASE_DRY_SPD; // % per second
 alarm[0] = room_speed;
 filling = false;
-fill_dur = 4; // In seconds
+fill_dur = RAIN_DUR; // In seconds
 </string>
           </argument>
         </arguments>

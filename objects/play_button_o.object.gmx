@@ -40,6 +40,7 @@
           <argument>
             <kind>1</kind>
             <string>text = "Iniciar";
+my_room = main_room;
 </string>
           </argument>
         </arguments>
