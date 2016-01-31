@@ -31,8 +31,8 @@ randomize();
 move_streak = 0;
 current_difficulty = 1;
 
-player = instance_create(3*room_width/4, room_height/2, player_o);
-move_control = instance_create(room_width/2, room_height *4/5, movement_generator_o);
+player = instance_create(room_width/2, room_height*6/15, player_o);
+move_control = instance_create(room_width/2, room_height *7/8, movement_generator_o);
 weir = instance_create(0, 0, weir_o);
 
 
