@@ -29,7 +29,7 @@
 
 audio_play_sound(defeat_snd, 1, false);
 
-instance_create(room_width/2, 3*room_height/4, play_again_o);
+instance_create(room_width/2, room_height/4, play_again_o);
 
 </string>
           </argument>

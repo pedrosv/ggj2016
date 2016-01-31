@@ -56,7 +56,6 @@
       <sprite>sprites\start_but_s</sprite>
       <sprite>sprites\credits_but_s</sprite>
       <sprite>sprites\controls_s</sprite>
-
     </sprites>
     <sprite>sprites\drop_s</sprite>
   </sprites>
@@ -120,8 +119,8 @@
       <object>objects\drop_o</object>
       <object>objects\tutorial_o</object>
       <object>objects\game_starter_o</object>
+      <object>objects\rain_o</object>
     </objects>
-    <object>objects\rain_o</object>
     <objects name="Game over">
       <object>objects\game_over_o</object>
       <object>objects\play_again_o</object>

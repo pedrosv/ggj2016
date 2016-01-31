@@ -30,6 +30,9 @@
 self.x = room_width/2;
 self.y = room_height*6/15;
 
+audio_stop_all();
+audio_play_sound(main_song, 1, true);
+
 alarm[0] = room_speed;
 </string>
           </argument>
