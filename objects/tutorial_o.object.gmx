@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>player = instance_create(room_width/2, room_height*8/15, player_o);
 
-text = "Ganhe pontos completando os rituais da chuva! Complete um ritual acertando todos os movimentos! Compita com seus amigos para ver quem faz mais pontos!!";
+text = "Ganhe pontos completando os rituais da chuva! Para realizar os movimentos de um ritual utilize as letras do teclado mostradas ao lado pela personagem. Desafie seus amigos para ver quem faz mais pontos!";
+
 
 mvs = ds_list_create();
 ds_list_add(mvs, TL, TM, TR, CL, CR, BL, BM, BR);
