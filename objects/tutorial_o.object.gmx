@@ -50,10 +50,26 @@
             <kind>1</kind>
             <string>set_text_draw(game_over_font, c_red, fa_center, fa_middle);
 
-show_debug_message(player.sprite_width);
-draw_text(player.x - player.sprite_width, player.y, TOP_LEFT_CTRL);
-//draw_text(room_width/3 + room_width/1.5, room_height*4/15, TOP_MIDDLE_CTRL);
-//draw_text(room_width, room_height*5/15, TOP_RIGHT_CTRL);
+var dist = sprite_get_width(char1_cm_s);
+var cra = 0;
+var tra = 45;
+var tma = 90;
+var tla = 135;
+var cla = 180;
+var bla = 225;
+var bma = 270;
+var bra = 315;
+
+draw_text(player.x + dist*dcos(tla), player.y - dist*dsin(tla), TOP_LEFT_CTRL);
+draw_text(player.x + dist*dcos(tma), player.y - dist*dsin(tma), TOP_MIDDLE_CTRL);
+draw_text(player.x + dist*dcos(tra), player.y - dist*dsin(tra), TOP_RIGHT_CTRL);
+draw_text(player.x + dist*dcos(cla), player.y - dist*dsin(cla), CENTER_LEFT_CTRL);
+draw_text(player.x + dist*dcos(cra), player.y - dist*dsin(cra), CENTER_RIGHT_CTRL);
+draw_text(player.x + dist*dcos(bla), player.y - dist*dsin(bla), BOT_LEFT_CTRL);
+draw_text(player.x + dist*dcos(bra), player.y - dist*dsin(bra), BOT_RIGHT_CTRL);
+draw_text(player.x + dist*dcos(bma), player.y - dist*dsin(bma), BOT_MIDDLE_CTRL);
+
+
 </string>
           </argument>
         </arguments>

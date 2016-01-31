@@ -49,6 +49,7 @@
     </sprites>
     <sprites name="GUI">
       <sprite>sprites\border_s</sprite>
+      <sprite>sprites\button_s</sprite>
     </sprites>
     <sprite>sprites\drop_s</sprite>
   </sprites>
@@ -97,6 +98,7 @@
       <object>objects\back_button_o</object>
       <object>objects\teste_button_o</object>
       <object>objects\credit_button_o</object>
+      <object>objects\button_o</object>
     </objects>
     <objects name="Game">
       <object>objects\game_controller_o</object>
