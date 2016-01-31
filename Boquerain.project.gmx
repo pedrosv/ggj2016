@@ -56,6 +56,7 @@
   </sprites>
   <backgrounds name="background">
     <background>background\main_bkg</background>
+    <background>background\gameover_bkg</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
