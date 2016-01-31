@@ -27,9 +27,8 @@
             <kind>1</kind>
             <string>/// Initializing attributes
 
-
+randomize();
 move_streak = 0;
-
 current_difficulty = 1;
 
 player = instance_create(3*room_width/4, room_height/2, player_o);
