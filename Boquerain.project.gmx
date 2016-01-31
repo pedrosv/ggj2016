@@ -69,12 +69,23 @@
       <sprite>sprites\gameover_text</sprite>
       <sprite>sprites\score_text</sprite>
     </sprites>
+    <sprites name="Tutorial">
+      <sprite>sprites\spr_A</sprite>
+      <sprite>sprites\spr_C</sprite>
+      <sprite>sprites\spr_D</sprite>
+      <sprite>sprites\spr_Z</sprite>
+      <sprite>sprites\spr_Q</sprite>
+      <sprite>sprites\spr_X</sprite>
+      <sprite>sprites\spr_W</sprite>
+      <sprite>sprites\spr_E</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\main_bkg</background>
     <background>background\gameover_bkg</background>
     <background>background\credit_bg</background>
     <background>background\menu_bkg</background>
+    <background>background\splash_scr</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
@@ -123,6 +134,7 @@
       <object>objects\credit_controller_o</object>
       <object>objects\play_again_o</object>
       <object>objects\tutorial_o</object>
+      <object>objects\splash_o</object>
     </objects>
     <objects name="Game">
       <object>objects\game_controller_o</object>
@@ -139,6 +151,7 @@
     </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\splash_room</room>
     <room>rooms\main_menu_room</room>
     <room>rooms\main_room</room>
     <room>rooms\room_amor</room>
