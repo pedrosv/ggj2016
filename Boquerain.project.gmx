@@ -58,6 +58,10 @@
       <sprite>sprites\controls_s</sprite>
     </sprites>
     <sprite>sprites\drop_s</sprite>
+    <sprites name="Game over">
+      <sprite>sprites\gameover_text</sprite>
+      <sprite>sprites\score_text</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\main_bkg</background>
