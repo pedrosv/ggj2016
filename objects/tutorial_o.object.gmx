@@ -96,7 +96,7 @@ var bma = 270;
 var bra = 315;
 
 set_text_draw(HUD_font, c_white, fa_center, fa_top);
-draw_text_ext(6*room_width/7, room_height - 7*string_height("A"), self.text, string_height("A"), room_width/4);
+draw_text_ext(6*room_width/7, 2*room_height/3, self.text, string_height("A"), room_width/4);
 
 draw_sprite(spr_Q, image_index, player.x + dist*dcos(tla), player.y - dist*dsin(tla));
 draw_sprite(spr_W, image_index, player.x + dist*dcos(tma), player.y - dist*dsin(tma));
