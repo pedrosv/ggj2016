@@ -97,7 +97,8 @@
     <room>rooms\room_amor</room>
     <room>rooms\credits_room</room>
   </rooms>
-  <constants number="11">
+  <constants number="12">
+    <constant name="ALPHA_UPDATE">5</constant>
     <constant name="WR">9</constant>
     <constant name="RAIN_AMOUNT">20</constant>
     <constant name="TR">0</constant>

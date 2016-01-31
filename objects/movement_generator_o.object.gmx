@@ -40,9 +40,35 @@ WRONG = char1_wrong_s;
 // Ritual movements and the current movement being displayed
 ritual_list = generate_new_moves();
 current_movement = 0;
+current_alpha = 1;
 
-// Initialize movement
+// Initialize movement counter
 alarm[0] = get_time_to_expire();
+alarm[1] = ALPHA_UPDATE;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>self.current_alpha -= ALPHA_UPDATE/(get_time_to_expire()+ALPHA_UPDATE);
+alarm[1] = ALPHA_UPDATE;
 </string>
           </argument>
         </arguments>
@@ -68,6 +94,7 @@ alarm[0] = get_time_to_expire();
             <string>/// Reset ritual if player took too long
 self.current_movement = 0;
 alarm[0] = get_time_to_expire();
+current_alpha = 1;
 audio_play_sound(got_it_wrong_snd, 1, false);
 </string>
           </argument>
@@ -93,7 +120,7 @@ audio_play_sound(got_it_wrong_snd, 1, false);
             <kind>1</kind>
             <string>var current_spr = get_move_animation(get_current_ritual_move());
 var spr_scale = 0.25;
-draw_sprite_ext(current_spr, image_index, x, y, spr_scale, spr_scale, 0, c_white, image_alpha);
+draw_sprite_ext(current_spr, image_index, x, y, spr_scale, spr_scale, 0, c_white, current_alpha);
 
 var space = 80;
 var border_xs = (sprite_get_width(current_spr) + space)*spr_scale / sprite_get_width(border_s); // Border X Scale
