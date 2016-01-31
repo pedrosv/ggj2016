@@ -76,6 +76,10 @@ if verify_input() {
     }
 }
 
+if self.weir.percentage &lt;= 0 {
+    room_goto(game_over_room);
+}
+
 </string>
           </argument>
         </arguments>

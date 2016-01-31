@@ -8,6 +8,7 @@
     <sound>sound\got_it_right_snd</sound>
     <sound>sound\got_it_wrong_snd</sound>
     <sound>sound\rain_snd</sound>
+    <sound>sound\defeat_snd</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -78,17 +79,29 @@
       <script>scripts\completed_ritual.gml</script>
       <script>scripts\got_it_right.gml</script>
     </scripts>
+    <scripts name="Utils">
+      <script>scripts\set_text_draw.gml</script>
+    </scripts>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\game_over_font</font>
+    <font>fonts\menu_font</font>
+  </fonts>
   <objects name="objects">
-    <object>objects\player_o</object>
-    <object>objects\game_controller_o</object>
-    <object>objects\movement_generator_o</object>
-    <object>objects\weir_o</object>
     <objects name="Menu">
       <object>objects\play_button_o</object>
       <object>objects\back_button_o</object>
       <object>objects\teste_button_o</object>
       <object>objects\credit_button_o</object>
+    </objects>
+    <objects name="Game">
+      <object>objects\game_controller_o</object>
+      <object>objects\player_o</object>
+      <object>objects\movement_generator_o</object>
+      <object>objects\weir_o</object>
+    </objects>
+    <objects name="Game over">
+      <object>objects\game_over_o</object>
     </objects>
   </objects>
   <rooms name="rooms">
@@ -96,8 +109,10 @@
     <room>rooms\main_room</room>
     <room>rooms\room_amor</room>
     <room>rooms\credits_room</room>
+    <room>rooms\game_over_room</room>
   </rooms>
-  <constants number="12">
+  <constants number="13">
+    <constant name="BASE_DRY_SPD">2</constant>
     <constant name="ALPHA_UPDATE">5</constant>
     <constant name="WR">9</constant>
     <constant name="RAIN_AMOUNT">20</constant>

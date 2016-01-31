@@ -3,5 +3,6 @@
 var increase_amount = argument0;
 
 with weir_o {
-    self.percentage += increase_amount;
+    self.filling = true;
+    alarm[1] = self.fill_dur * room_speed;
 }
