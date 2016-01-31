@@ -170,6 +170,13 @@ draw_sprite_ext(current_spr, image_index, x, y, spr_scale, spr_scale, 0, c_white
 var border_xs = sw / sprite_get_width(border_s); // Border X Scale
 var border_ys = sh / sprite_get_height(border_s); // Border Y Scale
 draw_sprite_ext(border_s, 0, x, y, border_xs, border_ys, 0, c_white, 1);
+
+// Draw hit list
+for (var i = 0; i &lt; self.current_movement; i++) {
+    draw_sprite_ext(get_move_animation(self.ritual_list[|i]), 0, 20 + i*sw/2, sh, spr_scale/2, spr_scale/2, 0, c_green, 0.9);
+}
+
+
 </string>
           </argument>
         </arguments>
