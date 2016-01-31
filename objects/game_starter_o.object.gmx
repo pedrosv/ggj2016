@@ -89,15 +89,21 @@ if(count &gt;= 0){
           <argument>
             <kind>1</kind>
             <string>draw_self();
-set_text_draw(game_over_font, $50CF80, fa_center, fa_middle);
+
 if(count &gt; 3){
-    draw_text(x, y, "Prepare-se ...");
+    draw_sprite(get_ready_s, 0, x, y);
 }
-else if(count &gt; 0){
-    draw_text(x, y, count);
+else if(count == 3){
+    draw_sprite(three_s, 0, x, y);
+}
+else if count == 2 {
+    draw_sprite(two_s, 0, x, y);
+}
+else if count == 1 {
+    draw_sprite(one_s, 0, x, y);
 }
 else {
-    draw_text(x, y, "Simbora!");
+    draw_sprite(go_s, 0, x, y);
 }
 </string>
           </argument>

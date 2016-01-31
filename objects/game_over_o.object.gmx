@@ -82,7 +82,7 @@ instance_create(room_width/2, room_height/4, play_again_o);
 draw_sprite(gameover_text, 0, room_width/2, room_height/2);
 draw_sprite(gameover_text, 1, room_width*3/5 - 50, room_height*2/3 + 50);
 draw_sprite(score_text, 0, room_width/2, room_height*2/3 + 150);
-draw_text(room_width/2 + 80, room_height*2/3 + 150, string(score));
+draw_text(room_width/2 + 110, room_height*2/3 + 150, string(score));
 </string>
           </argument>
         </arguments>

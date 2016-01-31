@@ -13,7 +13,7 @@
     <sound>sound\menu_song</sound>
   </sounds>
   <sprites name="sprites">
-    <sprites name="Characters">
+    <sprites name="Game">
       <sprite>sprites\char1_bl_s</sprite>
       <sprite>sprites\char1_bm_s</sprite>
       <sprite>sprites\char1_br_s</sprite>
@@ -33,6 +33,7 @@
       <sprite>sprites\paje_tl_s</sprite>
       <sprite>sprites\paje_tm_s</sprite>
       <sprite>sprites\paje_tr_s</sprite>
+      <sprite>sprites\drop_s</sprite>
     </sprites>
     <sprites name="Commands">
       <sprite>sprites\command_1_s</sprite>
@@ -57,8 +58,13 @@
       <sprite>sprites\credits_but_s</sprite>
       <sprite>sprites\controls_s</sprite>
       <sprite>sprites\back_s</sprite>
+      <sprite>sprites\score_s</sprite>
+      <sprite>sprites\get_ready_s</sprite>
+      <sprite>sprites\one_s</sprite>
+      <sprite>sprites\two_s</sprite>
+      <sprite>sprites\three_s</sprite>
+      <sprite>sprites\go_s</sprite>
     </sprites>
-    <sprite>sprites\drop_s</sprite>
     <sprites name="Game over">
       <sprite>sprites\gameover_text</sprite>
       <sprite>sprites\score_text</sprite>

@@ -105,8 +105,10 @@ if self.weir.percentage &lt;= 0 {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>set_text_draw(HUD_font,c_black, fa_left, fa_middle );
-draw_text(100, 100, score);
+            <string>draw_sprite(score_s, 0, room_width/2 - 20, 50);
+set_text_draw(game_over_font, c_white, fa_left, fa_middle );
+var w = sprite_get_width(score_s);
+draw_text(room_width/2 + w/2 + 15, 50, score);
 </string>
           </argument>
         </arguments>
