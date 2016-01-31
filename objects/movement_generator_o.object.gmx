@@ -41,6 +41,7 @@ WRONG = char1_wrong_s;
 ritual_list = generate_new_moves();
 current_movement = 0;
 current_alpha = 1;
+wrong_mask_alpha = 0;
 
 // Initialize movement counter
 alarm[0] = get_time_to_expire();
@@ -101,6 +102,33 @@ audio_play_sound(got_it_wrong_snd, 1, false);
         </arguments>
       </action>
     </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if self.wrong_mask_alpha &gt; 0 {
+    self.wrong_mask_alpha -= 1/room_speed;
+} else {
+    self.wrong_mask_alpha = 0;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="8" enumb="0">
       <action>
         <libid>1</libid>
@@ -118,13 +146,27 @@ audio_play_sound(got_it_wrong_snd, 1, false);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var current_spr = get_move_animation(get_current_ritual_move());
+            <string>// Get movement sprite
+var current_spr = get_move_animation(get_current_ritual_move());
 var spr_scale = 0.25;
+var space = 20;
+var sw = sprite_get_width(current_spr) * spr_scale + space;
+var sh = sprite_get_height(current_spr) * spr_scale + space;
+
+// Draw error mask if needed
+if self.wrong_mask_alpha &gt; 0 {
+    draw_set_color(c_red);
+    draw_set_alpha(self.wrong_mask_alpha);
+    draw_rectangle(x-sw/2,y-sh/2,x+sw/2,y+sh/2,false);
+    draw_set_alpha(1);
+}
+
+// Draw movement sprite
 draw_sprite_ext(current_spr, image_index, x, y, spr_scale, spr_scale, 0, c_white, current_alpha);
 
-var space = 80;
-var border_xs = (sprite_get_width(current_spr) + space)*spr_scale / sprite_get_width(border_s); // Border X Scale
-var border_ys = (sprite_get_height(current_spr) + space)*spr_scale / sprite_get_height(border_s); // Border Y Scale
+// Draw border
+var border_xs = sw / sprite_get_width(border_s); // Border X Scale
+var border_ys = sh / sprite_get_height(border_s); // Border Y Scale
 draw_sprite_ext(border_s, 0, x, y, border_xs, border_ys, 0, c_white, 1);
 </string>
           </argument>

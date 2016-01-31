@@ -7,6 +7,7 @@ with player_o {
 
 with movement_generator_o {
     alarm[0] = 1;
+    self.wrong_mask_alpha = 0.7;
 }
 
 

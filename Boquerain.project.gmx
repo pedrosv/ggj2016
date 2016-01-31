@@ -112,7 +112,7 @@
     <room>rooms\game_over_room</room>
   </rooms>
   <constants number="13">
-    <constant name="BASE_DRY_SPD">2</constant>
+    <constant name="BASE_DRY_SPD">1</constant>
     <constant name="ALPHA_UPDATE">5</constant>
     <constant name="WR">9</constant>
     <constant name="RAIN_AMOUNT">20</constant>
