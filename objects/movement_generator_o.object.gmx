@@ -157,7 +157,9 @@ var sh = sprite_get_height(current_spr) * spr_scale + space;
 if self.wrong_mask_alpha &gt; 0 {
     draw_set_color(c_red);
     draw_set_alpha(self.wrong_mask_alpha);
-    draw_rectangle(x-sw/2,y-sh/2,x+sw/2,y+sh/2,false);
+    var half_w = floor(sw/2);
+    var half_h = floor(sh/2);
+    draw_rectangle(x-half_w-1,y-half_h-1,x+half_w,y+half_h,false);
     draw_set_alpha(1);
 }
 
