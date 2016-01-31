@@ -107,6 +107,8 @@ draw_text(player.x + dist*dcos(bma), player.y - dist*dsin(bma), BOT_MIDDLE_CTRL)
 var next_move = mvs[|self.index];
 
 draw_sprite(get_move_animation(next_move), 0, self.player.x, self.player.y);
+
+show_debug_message("nxt_m: " + string(next_move));
 </string>
           </argument>
         </arguments>
