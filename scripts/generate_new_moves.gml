@@ -1,13 +1,9 @@
-/// generate_new_moves()
+/// generate_new_moves(level)
+
+level = argument0 + 3;
 
 var mvs = ds_list_create();
-for(var i = 0; i < self.amount; i++) {
+for(var i = 0; i < level; i++) {
     ds_list_add(mvs, choose(TL, TM, TR, CL, CM, CR, BL, BM, BR));
 }
-
-var result = ""
-for (var i=0; i<ds_list_size(mvs); i+=1) {
-    result += string(ds_list_find_value(mvs,i)) + ",";
-}
-show_debug_message("Moves generated: " + result);
 return mvs;

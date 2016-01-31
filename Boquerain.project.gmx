@@ -72,10 +72,9 @@
     </scripts>
   </scripts>
   <objects name="objects">
-    <object>objects\dancer_o</object>
+    <object>objects\player_o</object>
     <object>objects\game_controller_o</object>
     <object>objects\paje_o</object>
-    <object>objects\player_o</object>
     <object>objects\weir_o</object>
     <objects name="Menu">
       <object>objects\play_button_o</object>

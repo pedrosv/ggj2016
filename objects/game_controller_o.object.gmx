@@ -27,111 +27,17 @@
             <kind>1</kind>
             <string>/// Initializing attributes
 
-movements = ds_list_create();
-amount = 4;
-correct_moves = 0;
 
-current_move = noone;
 move_streak = 0;
 
 current_difficulty = 1;
 
-instance_create(3*room_width/4, room_height/2, player_o);
-instance_create(0, 0, weir_o);
+player = instance_create(3*room_width/4, room_height/2, player_o);
+paje = instance_create(room_width/2, room_height *4/5, paje_o);
+weir = instance_create(0, 0, weir_o);
 
-alarm[1] = room_speed;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="1">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Init paje moves
 
-self.movements = generate_new_moves();
-change_paje_move(get_current_paje_move());
-alarm[0] = get_time_threshold(self.current_difficulty);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="2" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Change and verify moves
-if verify_movement(get_current_paje_move(), self.current_move) {
-    self.correct_moves++;
-    if self.correct_moves &gt;= amount { // Won, go to next round
-        init_next_round();
-    }
-} else {
-    // Reset correct moves count
-    self.correct_moves = 0;
-    change_paje_move(get_current_paje_move());
-}
-change_paje_move(get_current_paje_move());
-self.current_move = noone;
-alarm[0] = get_time_threshold(self.current_difficulty);
 
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="3" enumb="0">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// Verify inputs
-
-verify_input();
-if self.current_move != noone {
-    change_dancer_move(self.current_move);
-}
 </string>
           </argument>
         </arguments>
