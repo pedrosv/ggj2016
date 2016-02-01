@@ -35,9 +35,7 @@ player = instance_create(room_width/2, room_height*6/15, player_o);
 move_control = instance_create(room_width/2, room_height *7/8, movement_generator_o);
 weir = instance_create(0, 0, weir_o);
 
-
-
-
+score = 0;
 
 </string>
           </argument>
