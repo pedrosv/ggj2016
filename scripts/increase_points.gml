@@ -1,3 +1,6 @@
-/// increase_points()
+/// increase_points(base_amount, difficulty_factor)
 
-score += 10 + (get_difficulty() * 2);
+var base = argument0;
+var df = argument1;
+
+score += base + (get_difficulty() * df);

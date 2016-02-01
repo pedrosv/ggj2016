@@ -1,7 +1,7 @@
 /// completed_ritual()
 
 make_it_rain();
-increase_points();
+increase_points(BASE_RAIN_PNT, RAIN_INC_FAC_PNT);
 with game_controller_o {
     self.current_difficulty++;
 }

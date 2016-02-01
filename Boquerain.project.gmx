@@ -101,7 +101,6 @@
       <script>scripts\verify_movement.gml</script>
       <script>scripts\generate_new_moves.gml</script>
       <script>scripts\get_current_ritual_move.gml</script>
-      <script>scripts\get_time_to_expire.gml</script>
       <script>scripts\get_move_animation.gml</script>
     </scripts>
     <scripts name="Weir">
@@ -110,14 +109,17 @@
     </scripts>
     <scripts name="Gameplay">
       <script>scripts\make_it_rain.gml</script>
-      <script>scripts\init_next_round.gml</script>
+      <script>scripts\complete_ritual.gml</script>
       <script>scripts\got_it_wrong.gml</script>
       <script>scripts\completed_ritual.gml</script>
       <script>scripts\got_it_right.gml</script>
+      <script>scripts\get_time_to_expire.gml</script>
+      <script>scripts\get_dry_amount.gml</script>
     </scripts>
     <scripts name="Utils">
       <script>scripts\set_text_draw.gml</script>
       <script>scripts\get_tut_angle.gml</script>
+      <script>scripts\alternating_limits_function.gml</script>
     </scripts>
   </scripts>
   <fonts name="fonts">
@@ -159,13 +161,15 @@
     <room>rooms\game_over_room</room>
     <room>rooms\how_to_play_room</room>
   </rooms>
-  <constants number="15">
+  <constants number="17">
+    <constant name="RAIN_INC_FAC_PNT">2</constant>
+    <constant name="BASE_RAIN_PNT">10</constant>
     <constant name="DRY_INCREASE">0.5</constant>
     <constant name="RAIN_DUR">3</constant>
-    <constant name="BASE_DRY_SPD">1</constant>
+    <constant name="BASE_DRY_SPD">1.5</constant>
     <constant name="ALPHA_UPDATE">5</constant>
     <constant name="WR">9</constant>
-    <constant name="RAIN_AMOUNT">20</constant>
+    <constant name="RAIN_AMOUNT">25</constant>
     <constant name="TR">0</constant>
     <constant name="TM">1</constant>
     <constant name="TL">2</constant>

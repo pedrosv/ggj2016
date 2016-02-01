@@ -2,4 +2,9 @@
 
 var dif = get_difficulty();
 
-return 1 + 2*room_speed - min(1.5*room_speed, (6 * dif));
+var max_time = 3;
+var min_time = 0.8;
+var scale_factor = 0.4;
+
+var time_sec = max_time - min((max_time-min_time), (scale_factor * dif));
+return 1 + time_sec*room_speed;

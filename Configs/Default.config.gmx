@@ -644,7 +644,8 @@
     <option_xbone_title_id></option_xbone_title_id>
   </Options>
   <ConfigConstants>
-    <constants number="9">
+    <constants number="10">
+      <constant name="CURRENT_VOLUME">"Volume atual: "</constant>
       <constant name="TOP_LEFT_CTRL">"Q"</constant>
       <constant name="TOP_MIDDLE_CTRL">"W"</constant>
       <constant name="TOP_RIGHT_CTRL">"E"</constant>
